@@ -1,16 +1,6 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
-
-import NavBar from "./components/common/navbar";
 import Hero from "./components/common/hero";
-import Page from "./components/page";
-import NavBack from "./components/common/navback";
-import Map from "./components/map";
-import MapRaw from "./components/mapraw";
-import Partners from "./components/partners";
-import Conference from "./components/conference";
-import Ambassadors from "./components/ambassadors";
-import Library from "./components/library";
+
 import dtpLogo from "./components/images/logoDTP.png";
 
 class App extends React.Component {
@@ -50,78 +40,7 @@ class App extends React.Component {
     const { isMenuVisible: toggle, offsetY } = this.state;
     return (
       <>
-        <NavBar
-          toggle={toggle}
-          offsetY={offsetY}
-          onToggle={this.setMenuVisibility}
-          onReset={this.resetScroll}
-        />
-        <Routes>
-          <Route path="/" element={<Hero />} />
-          <Route
-            path="page"
-            element={
-              <>
-                <NavBack toggle={toggle} />
-                <Page />
-              </>
-            }
-          />
-          <Route
-            path="map"
-            element={
-              <>
-                <NavBack toggle={toggle} />
-                <Map />
-              </>
-            }
-          />
-          <Route
-            path="94afG4qf3Rcp"
-            element={
-              <>
-                <NavBack toggle={toggle} />
-                <MapRaw />
-              </>
-            }
-          />
-          <Route
-            path="partners"
-            element={
-              <>
-                <NavBack toggle={toggle} />
-                <Partners />
-              </>
-            }
-          />
-          <Route
-            path="conference"
-            element={
-              <>
-                <NavBack toggle={toggle} />
-                <Conference />
-              </>
-            }
-          />
-          <Route
-            path="ambassadors"
-            element={
-              <>
-                <NavBack toggle={toggle} />
-                <Ambassadors />
-              </>
-            }
-          />
-          <Route
-            path="library"
-            element={
-              <>
-                <NavBack toggle={toggle} />
-                <Library />
-              </>
-            }
-          />
-        </Routes>
+        <Hero />
         <div className="footer">
           <img
             className="dtpLogo"
