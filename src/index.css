@@ -1,3 +1,8 @@
+:root {
+  --color-body-olive: #b8b883;
+  --color-body-text: rgb(30, 100, 100);
+}
+
 html {
   font-size: 62.5%;
 }

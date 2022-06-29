@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+
 import NavBar from "./components/common/navbar";
 import Hero from "./components/common/hero";
 import Page from "./components/page";
@@ -76,7 +77,7 @@ class App extends React.Component {
             }
           />
           <Route
-            path="94afG4qf3Rcpasdf"
+            path="94afG4qf3Rcp"
             element={
               <>
                 <NavBack toggle={toggle} />

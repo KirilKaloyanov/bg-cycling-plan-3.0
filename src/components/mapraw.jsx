@@ -19,15 +19,15 @@ import nat8 from "../data/ViaDiagonalis8";
 import mapData from "../data/NatVelo.json";
 
 export default function Map() {
-  // let nat1Route = mapArrayToRoute(nat1);
-  // let ev6Route = mapArrayToRoute(ev6);
-  // let ev13Route = mapArrayToRoute(ev13);
-  // let nat3Route = mapArrayToRoute(nat3);
-  // let nat4Route = mapArrayToRoute(nat4);
-  // let nat5Route = mapArrayToRoute(nat5);
-  // let nat6Route = mapArrayToRoute(nat6);
-  // let nat7Route = mapArrayToRoute(nat7);
-  // let nat8Route = mapArrayToRoute(nat8);
+  let nat1Route = mapArrayToRoute(nat1);
+  let ev6Route = mapArrayToRoute(ev6);
+  let ev13Route = mapArrayToRoute(ev13);
+  let nat3Route = mapArrayToRoute(nat3);
+  let nat4Route = mapArrayToRoute(nat4);
+  let nat5Route = mapArrayToRoute(nat5);
+  let nat6Route = mapArrayToRoute(nat6);
+  let nat7Route = mapArrayToRoute(nat7);
+  let nat8Route = mapArrayToRoute(nat8);
 
   return (
     <div className="map_container">
@@ -37,7 +37,7 @@ export default function Map() {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
-        {/* <Polyline
+        <Polyline
           pathOptions={{ color: "#ffeb3b", weight: 5 }}
           positions={nat1Route}
         >
@@ -90,7 +90,7 @@ export default function Map() {
           positions={nat8Route}
         >
           <Popup>Национален маршрут 8 - Виа Диагоналис</Popup>
-        </Polyline> */}
+        </Polyline>
         {/* <GeoJSON data={mapData.features} /> */}
       </MapContainer>
     </div>
