@@ -50,6 +50,11 @@ class NavBar extends Component {
               </Link>
             </div>
             <div className="item">
+              <Link to="ambassadors" className="menu_link" onClick={onReset}>
+                Посланици
+              </Link>
+            </div>
+            <div className="item">
               <Link to="library" className="menu_link" onClick={onReset}>
                 Библиотека
               </Link>

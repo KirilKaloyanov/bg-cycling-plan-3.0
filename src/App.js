@@ -7,6 +7,7 @@ import MapRaw from "./components/mapraw";
 import Hero from "./components/common/hero";
 import Page from "./components/page";
 import Partners from "./components/partners";
+import Ambassadors from "./components/ambassadors";
 import Library from "./components/library";
 import dtpLogo from "./components/images/logoDTP.png";
 
@@ -88,6 +89,15 @@ class App extends React.Component {
               <>
                 <NavBack toggle={toggle} />
                 <Partners />
+              </>
+            }
+          />
+          <Route
+            path="ambassadors"
+            element={
+              <>
+                <NavBack toggle={toggle} />
+                <Ambassadors />
               </>
             }
           />
