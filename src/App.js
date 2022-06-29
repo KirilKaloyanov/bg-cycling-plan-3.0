@@ -6,7 +6,8 @@ import Map from "./components/map";
 import MapRaw from "./components/mapraw";
 import Hero from "./components/common/hero";
 import Page from "./components/page";
-
+import Partners from "./components/partners";
+import Library from "./components/library";
 import dtpLogo from "./components/images/logoDTP.png";
 
 class App extends React.Component {
@@ -78,6 +79,24 @@ class App extends React.Component {
               <>
                 <NavBack toggle={toggle} />
                 <MapRaw />
+              </>
+            }
+          />
+          <Route
+            path="partners"
+            element={
+              <>
+                <NavBack toggle={toggle} />
+                <Partners />
+              </>
+            }
+          />
+          <Route
+            path="library"
+            element={
+              <>
+                <NavBack toggle={toggle} />
+                <Library />
               </>
             }
           />
