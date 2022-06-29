@@ -1,5 +1,10 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
+import NavBar from "./components/common/navbar";
+import NavBack from "./components/common/navback";
+
 import Hero from "./components/common/hero";
+import Page from "./components/page";
 
 import dtpLogo from "./components/images/logoDTP.png";
 
@@ -40,7 +45,25 @@ class App extends React.Component {
     const { isMenuVisible: toggle, offsetY } = this.state;
     return (
       <>
-        <Hero />
+        <NavBar
+          toggle={toggle}
+          offsetY={offsetY}
+          onToggle={this.setMenuVisibility}
+          onReset={this.resetScroll}
+        />
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route
+            path="page"
+            element={
+              <>
+                <NavBack toggle={toggle} />
+                <Page />
+              </>
+            }
+          />
+        </Routes>
+
         <div className="footer">
           <img
             className="dtpLogo"
