@@ -6,6 +6,7 @@ import Map from "./components/map";
 import MapRaw from "./components/mapraw";
 import Hero from "./components/common/hero";
 import Page from "./components/page";
+import Conference from "./components/conference";
 import Partners from "./components/partners";
 import Ambassadors from "./components/ambassadors";
 import Library from "./components/library";
@@ -80,6 +81,15 @@ class App extends React.Component {
               <>
                 <NavBack toggle={toggle} />
                 <MapRaw />
+              </>
+            }
+          />
+          <Route
+            path="conference"
+            element={
+              <>
+                <NavBack toggle={toggle} />
+                <Conference />
               </>
             }
           />

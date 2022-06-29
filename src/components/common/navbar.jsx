@@ -45,6 +45,11 @@ class NavBar extends Component {
               </Link>
             </div>
             <div className="item">
+              <Link to="conference" className="menu_link" onClick={onReset}>
+                Конференция
+              </Link>
+            </div>
+            <div className="item">
               <Link to="partners" className="menu_link" onClick={onReset}>
                 Партньори
               </Link>
