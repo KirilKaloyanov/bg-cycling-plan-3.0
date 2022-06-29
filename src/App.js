@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/common/navbar";
 import NavBack from "./components/common/navback";
-
+import Map from "./components/map";
 import Hero from "./components/common/hero";
 import Page from "./components/page";
 
@@ -62,8 +62,16 @@ class App extends React.Component {
               </>
             }
           />
+          <Route
+            path="map"
+            element={
+              <>
+                <NavBack toggle={toggle} />
+                <Map />
+              </>
+            }
+          />
         </Routes>
-
         <div className="footer">
           <img
             className="dtpLogo"

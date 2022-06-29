@@ -39,6 +39,11 @@ class NavBar extends Component {
                 План
               </Link>
             </div>
+            <div className="item">
+              <Link to="map" className="menu_link" onClick={onReset}>
+                Веломрежа
+              </Link>
+            </div>
           </nav>
         </div>
       </header>
