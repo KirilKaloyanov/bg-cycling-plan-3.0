@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  MapContainer,
-  TileLayer,
-  Polyline,
-  Popup,
-  GeoJSON,
-} from "react-leaflet";
+import { MapContainer, TileLayer } from "react-leaflet";
 
 export default function Map() {
   return (
