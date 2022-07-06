@@ -516,6 +516,12 @@ a {
 /*  FORM  */
 /*  FORM  */
 
+.image_path {
+  width: 100%;
+  height: 20vw;
+  object-fit: cover;
+}
+
 .form_container {
   width: 48rem;
   margin: 2rem auto;
