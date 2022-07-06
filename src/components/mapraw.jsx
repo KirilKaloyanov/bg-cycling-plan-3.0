@@ -9,7 +9,7 @@ import nat7 from "../data/Chernomorski7.json";
 import nat8 from "../data/ViaDiagonalis8.json";
 import nat10 from "../data/IronCurtainTrail10.json";
 
-export default function Map() {
+export default function MapRaw() {
   return (
     <div className="map_container">
       <MapContainer center={[42.705, 25.09]} zoom={7.4} scrollWheelZoom={true}>
