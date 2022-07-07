@@ -13,6 +13,7 @@ class Conference extends Component {
       lastName: "",
       email: "",
       organisation: "",
+      phone: "",
     },
     errors: {},
     registrationId: "",
@@ -23,6 +24,7 @@ class Conference extends Component {
     lastName: Joi.string().required().max(30),
     email: Joi.string().email().max(96),
     organisation: Joi.string().max(256),
+    phone: Joi.string().max(25),
   };
 
   componentDidMount() {
@@ -37,6 +39,7 @@ class Conference extends Component {
       lastName: "",
       email: "",
       organisation: "",
+      phone: "",
     };
     const registrationId = "";
     this.setState({ account, registrationId });
@@ -75,7 +78,7 @@ class Conference extends Component {
     const result = Joi.validate(this.state.account, this.schema, {
       abortEarly: false,
     });
-    if (!result.error) return null;
+    if (!result.error || result.error.details[0].path[0] === 'phone') return null;
     let errors = {};
     if (result.error) {
       for (let item of result.error.details) {
@@ -84,7 +87,7 @@ class Conference extends Component {
     }
     return errors;
   };
-
+  
   handleSubmit = async (e) => {
     e.preventDefault();
     let errors = this.validate();
@@ -123,7 +126,7 @@ class Conference extends Component {
   };
 
   render() {
-    const { firstName, lastName, email, organisation } = this.state.account;
+    const { firstName, lastName, email, organisation, phone } = this.state.account;
     return (
       <div>
         <img src={path} alt="Bicycle path" className="image_path" />
@@ -156,7 +159,7 @@ class Conference extends Component {
             <br />
             За връзка с организаторите:
             <br />
-            <img src={mail} />
+            <img src={mail} alt=""/>
           </div>
           {this.state.registrationId && (
             <div>
@@ -178,6 +181,7 @@ class Conference extends Component {
               {this.renderInput("lastName", "Фамилия*", lastName)}
               {this.renderInput("email", "E-mail*", email)}
               {this.renderInput("organisation", "Организация*", organisation)}
+              {this.renderInput("phone", "Телефон", phone)}
               <button type="submit" className="btn_arrow">
                 Регистрирай се
               </button>
