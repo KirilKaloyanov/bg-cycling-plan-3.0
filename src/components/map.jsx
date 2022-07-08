@@ -11,7 +11,7 @@ export default function Map() {
         <MapContainer
           center={[42.705, 25.09]}
           zoom={7.4}
-          scrollWheelZoom={true}
+          scrollWheelZoom={false}
         >
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
