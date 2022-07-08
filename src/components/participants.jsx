@@ -12,7 +12,6 @@ const Participants = () => {
     getData();
   }, []);
 
-  participants.map((x) => console.log(x.lastName));
 
   return (
     <div>
