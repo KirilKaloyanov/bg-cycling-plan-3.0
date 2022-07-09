@@ -576,17 +576,19 @@ a {
   .video_container_yt {
     width: 100%;
   }
-  .video_description {
-    max-width: 300px;
-  }
 }
 
 @media screen and (max-width: 800px) {
   .video_description {
-    max-width: 560px;
     margin: 14px 0 0 0;
   }
 }
+
+.mp4video{
+  width: 100%;
+}
+
+
 
 /*  FOOTER  */
 /*  FOOTER  */
