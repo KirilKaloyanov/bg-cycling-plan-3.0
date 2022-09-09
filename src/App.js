@@ -10,6 +10,7 @@ import Conference from "./components/conference";
 import Participants from "./components/participants";
 import Partners from "./components/partners";
 import Ambassadors from "./components/ambassadors";
+import Ambassador from "./components/ambassador";
 import Library from "./components/library";
 import dtpLogo from "./components/images/logoDTP.png";
 
@@ -57,7 +58,16 @@ class App extends React.Component {
           onReset={this.resetScroll}
         />
         <Routes>
-          <Route path="/" element={<Hero />} />
+          <Route path="/" element={
+            <>
+              <Hero />
+              <Ambassador />
+              <Map />
+              <br />
+              <Conference />
+              <Partners />
+            </>
+            } />
           <Route
             path="page"
             element={

@@ -565,8 +565,7 @@ a {
 }
 
 .video_container_yt {
-  width: 560px;
-  height: 315px;
+  width: 100%;
 }
 
 .video_description {
@@ -575,20 +574,21 @@ a {
 
 @media screen and (max-width: 600px) {
   .video_container_yt {
-    width: 300px;
-    height: 168.75px;
-  }
-  .video_description {
-    width: 300px;
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 800px) {
   .video_description {
-    max-width: 560px;
     margin: 14px 0 0 0;
   }
 }
+
+.mp4video{
+  width: 100%;
+}
+
+
 
 /*  FOOTER  */
 /*  FOOTER  */
@@ -635,4 +635,15 @@ a {
 
 .leaflet-container {
   height: 500px;
+  position: relative;
+  z-index: 0;
+}
+
+thead {
+  font-weight: bold;
+}
+
+td {
+  padding: 5px;
+
 }
