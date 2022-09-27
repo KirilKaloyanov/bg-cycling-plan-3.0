@@ -6,6 +6,10 @@ export function getParticipants() {
   return http.get(apiEndpoint);
 }
 
+export function getHello() {
+  return http.get(`${apiEndpoint}/hello`);
+}
+
 export function registerParticipant(participant) {
   return http.post(apiEndpoint, {
     firstName: participant.firstName,
