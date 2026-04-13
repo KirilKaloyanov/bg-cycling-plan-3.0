@@ -1,6 +1,5 @@
 steps:
-  # Стъпка 1: Изграждане на Docker изображението
-  # Използваме таг с commit SHA за проследимост на версиите
+  # Стъпка 1: Изграждане на Docker изображението. Използваме таг с commit SHA за проследимост на версиите
   - name: 'gcr.io/cloud-builders/docker'
     args: 
       - 'build'
@@ -28,6 +27,9 @@ steps:
       - '--allow-unauthenticated' # Прави сайта публично достъпен
       - '--port'
       - '8080'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
 
 # Добавяме изображенията в списъка за проследяване от Cloud Build
 images:
