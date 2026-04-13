@@ -31,4 +31,4 @@ steps:
 
 # Добавяме изображенията в списъка за проследяване от Cloud Build
 images:
-  - 'europe-north1-docker.pkg.dev/$PROJECT_ID/react-repo/bg-cycling-app:$COMMIT_SHA'
+  - 'europe-north1-docker.pkg.dev/$PROJECT_ID/bg-cycling-plan/bg-cycling-app:$COMMIT_SHA'
